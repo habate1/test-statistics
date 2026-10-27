@@ -1,12 +1,18 @@
 package com.pluralsight;
 
+import java.util.Arrays;
+
 public class TestStatsApp {
     public static void main(String[] args) {
         // create an array with 10 test scores
         int[] testScores = {70, 100, 23, 54, 98, 56, 99, 97, 60, 99};
+
+        // declare variables
         int sum = 0;
         double average = 0;
         int highestScore = 0, lowestScore = testScores[0];
+
+        // go through entire array
         for (int i = 0; i < testScores.length; i++) {
             sum += testScores[i];
             if (testScores[i] > highestScore) {
@@ -16,6 +22,7 @@ public class TestStatsApp {
                 lowestScore = testScores[i];
             }
         }
+
         // figure out average
         average = sum / testScores.length;
 
